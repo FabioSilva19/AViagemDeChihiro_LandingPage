@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+
+body{
+    background: linear-gradient(180.02deg, #628E75, #1A4855);
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: fit-content;
+    color: #F9F9F9;
+    padding: 0 20px ;
+    font-family: poppins;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    max-width: 1030px;
+    justify-content: space-between;
+    margin: 20px auto 75px;
+    
+    h1{
+        img{
+            width: 100px;
+        }
+    }
+
+    nav{
+        a{
+            margin: 0 15px;
+            width: 20px;
+        }
+    }
+
+}
+
+main{
+    max-width: 1030px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    margin: 0 auto;
+   align-items: center;
+
+    .principal{
+        width: 50%;
+        max-width: 450px;
+        h3{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        h1{
+            font-style: normal;
+            font-weight: 900;
+            font-size: 68px;
+            line-height: 74px;
+            
+        }
+
+        p{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 29px;
+            margin-top: 25px;
+        }
+
+        .cta{
+            margin-top: 45px;
+            display: flex;
+            flex-wrap: wrap;
+            a{
+                width: 225px;
+                height: 45px;
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #F9F9F9;
+                text-decoration: none;
+                font-family: poppins;
+                margin-bottom: 20px;
+                
+            }
+
+            a.assistir-agora{
+                background-image: url(../../image/background-assistirAgora.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            a.assistir-trailer{
+                background-image: url(../../image/background-assistirTrailer.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+        }
+    }
+
+    .side-content{
+        background-image: url(../image/ilustracao.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 40%;
+        height: 370px;
+        animation-name: animation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes animation{
+   from{
+    background-position: 0 25px;
+   } to{
+       background-position: 0 -20px;
+   }
+  }
+
+
+  @media only screen and (max-width: 720px) {
+      body{
+          height: fit-content;
+      }
+      header{
+          margin-bottom: 20px;
+      }
+      main {
+          .side-content{
+            width: 100%;
+            background-size: 320px;
+            height: 250px;
+            animation: none;
+            background-position: center;
+            
+      }
+      .principal{ 
+        width: 100%;
+        a.assistir-trailer{
+            display: none;
+        }
+    }
+
+    }
+  }
